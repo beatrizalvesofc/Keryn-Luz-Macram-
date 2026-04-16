@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Georgia", serif;
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+  
+  --color-brand-bg: #F9F7F2;
+  --color-brand-text: #2D2926;
+  --color-brand-accent: #5A5A40;
+  --color-brand-warm: #D68C71;
+  --color-brand-muted: #A6A29A;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-brand-text font-sans;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+.column-title {
+  @apply font-serif text-lg border-b border-brand-text pb-2 mb-4 flex items-center;
+}
+
+.column-title span {
+  @apply text-xs mr-2 font-sans font-bold opacity-50;
+}
+
+.profile-card {
+  @apply bg-white p-5 rounded-sm shadow-[4px_4px_0px_rgba(0,0,0,0.05)] mb-5;
+}
+
+.profile-card h3 {
+  @apply text-sm mb-2 text-brand-accent uppercase font-sans font-bold;
+}
+
+.priority-list li {
+  @apply text-xs py-2 border-b border-dashed border-brand-muted flex justify-between items-center;
+}
+
+.quote-block {
+  @apply font-serif text-xl italic leading-tight text-brand-accent mt-5 pl-4 border-l-3 border-brand-warm;
+}
+
+.pill-tag {
+  @apply inline-block px-2.5 py-1 border border-brand-muted rounded-full text-[10px] m-0.5 uppercase tracking-wider;
+}
